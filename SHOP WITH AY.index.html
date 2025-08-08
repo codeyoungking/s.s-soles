@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lag="en">
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
+      <title>my MY BUSINESS APP</title>
+      <link rel="style sheet"
+href="style.css">
+</head>
+<body>
+
+    <header>
+         <h1>sadiq soles</h1>
+         <p>we provide the best soles</p>
+    </header>
+            
+        <main>
+            <section id="about">
+                            <h2>ABOUT US</h2>
+                            <p>our mission is to make buying and the delevary of shoes becomes easy for people in nigeria, we started this business in the year 2024,september,25.the people that inspired us is our friend..</p>
+                            <section id="portfolio">
+                          <h2>our product</h2>
+                       
+                      <div class="portfolio-item">
+                                                <h3>new shoes</h3>
+                                   <img
+src="my-cool-projet/my-cool-progect.jpg"alt="Aphoto of the first project i completed.">
+
+
+                                         <p>we made a brand new shoes for the men and women,the shoes are confortable and affordable price .</p>
+                                     </div>
+                                   </section>
+
+                                 <section id="contact us">
+                              <form>action="give us feed back"method"post">
+                                                                            <label
+                                                                          for="name">name:</label>
+               <input type="email"id="email" name="email"requird>
+
+                                                                             <label
+for="massage">massage:</label>
+                           <textarea
+id="massage" name="massage" row="4"
+required></textarea>
+       <button
+type=submit">send massage </button>
+              </form>
+            </section>
+        </main>
+        <footer>
+           <p>&copy;2025 sadiq soles.All right reserved.</p>
+        </footer>
+
+</body>
+</html>
+  
+
+/* Basic style*/
+body{font-family: Arial, sans-serif;
+     margin: 0;
+     line-height: 1.6;
+     background-color:#f4f4f4;
+     color:#333;}
+.container{
+    max-width: 960px;
+    margin:auto;
+    overflow: hidden;
+    padding:0 2rem;
+}
+header{
+       background:#333;
+       color:#fff;
+      padding:2rem 0;
+      text-align: center;
+}
+header h1 {
+           margin-bottom: 0;
+}
+main{
+     padding: 2rem 0;
+}
+section {
+         padding: 2rem;
+         margin-botton: 1rem;
+         background: #fff;
+         boder-radius: 8px
+         box-shadow: 0 2px 5px
+rgba(0,0,0,0,.1);
+}
+
+/*portfolio section*/
+#portfolio {
+    display: grid;
+    grid-template-columes:
+repeat(auto-fit, minma(300px, 1fr));
+   gap: 2rem;
+}
+
+portfolio-item {
+                background: #f9f9f9;
+                pading: 1item;
+                border-left: 5px solid #333;
+}
+/*contact form*/
+#cntact form {
+    display: flex;
+    flex-direction: column;
+}
+contact label {
+   margen-top: 1rem;
+}
+#contact input,#contact textarea{
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contact botton{
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #333;
+    color: #fff;
+    border: none;            
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#contact button:hover {
+    backgroun: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff
+
+{
+"name":"sadiq soles",
+"short_name":"s.s stor",
+"start_url: "index.html",
+"display": "standalone",
+"background_color": "#333333",
+"icon": [
+  {
+    "src": "images/icon-192x192.png",
+     "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "mages/icons-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+     }
+    ]
+   }
+const CASHE_NAME =
+'my-business-app-v1';
+const urlsTocache = [
+  '/',
+  'index.html',
+  'style.css',
+  'manifest.json',
+  'image/icon-192x192.png',
+  'image/icon-512x512.png'
+];
+
+self.addEventlistener('install',
+function(even){
+  // perform install step
+  event.waituntill(
+   caches.open(cache_name)
+     .then(function(cache) {
+       console.logo('opened cache');
+         return
+cache.addall(urlsTocache);
+      })
+     );
+   });
+
+self.addEventlistener('fetch',
+function(event)) {
+  event.respondwuth(
+    cache.match(event.request)
+      .then(function(respond) {
+        // cache hit - retun
+response
+        if (response) {
+          return response;
+         }
+         return fetch(event.request);
+        })
+       );
+};
+
+<head>
+     <meta charset="utf-8">
+      <meta name="viewport"
+content=width=device-width,
+initial-scale=1.0">
+   <title>my business app</title>
+   <link rel= "stylesheet"
+href="style.css">
+
+     <link rel="manifest"
+href="manifest.json">
+      <script>
+        if ('sservgiceworker' in 
+navigator) {
+
+window.addEventlistener('load',
+functio() {
+          navigator.serviceworker.
+register('service-worker.j
+s').then(function(registration)
+{
+
+console.log('serviceworker
+registration successful with scope:
+',registration.scope);
+         }, function(err) {
+
+console.;log('serviceworker
+registration faild: ',err);
+          });
+         });
+        }
+      </script>
+<head>
